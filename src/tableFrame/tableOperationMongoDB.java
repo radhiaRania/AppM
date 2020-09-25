@@ -178,7 +178,7 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         TxtMinTamount = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        TxtResTamount = new javax.swing.JLabel();
+        TxtResTripTime = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         TxxtMinPasCount = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -200,6 +200,19 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
         ;
         SpnPassCOUNTMax = new javax.swing.JSpinner();
         SpnTripDistMax = new DoubleSpinner();
+        BtnTripTime1 = new rojeru_san.RSButton();
+        jLabel25 = new javax.swing.JLabel();
+        TxtMaxTripTime1 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        TxtMinTripTime1 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        BtnTotAmount1 = new rojeru_san.RSButton();
+        radioTripTime1 = new javax.swing.JRadioButton();
+        SpnTripTimeMax1 = new DoubleSpinner()
+        ;
+        SpnTripTimeMin1 = new DoubleSpinner()
+        ;
+        TxtResTamount1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         tableDistrDelete = new javax.swing.JTable();
@@ -787,7 +800,7 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
                 BtnPCountActionPerformed(evt);
             }
         });
-        jPanel3.add(BtnPCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, 480, 80));
+        jPanel3.add(BtnPCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 360, 480, 80));
 
         BtnTripDist.setBackground(new java.awt.Color(102, 102, 102));
         BtnTripDist.setText("Distrubition Of Trip Distance");
@@ -797,7 +810,7 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
                 BtnTripDistActionPerformed(evt);
             }
         });
-        jPanel3.add(BtnTripDist, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 540, 480, 80));
+        jPanel3.add(BtnTripDist, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 580, 480, 80));
 
         BtnTAmount.setBackground(new java.awt.Color(102, 102, 102));
         BtnTAmount.setText("Distrubition Of Total Amount");
@@ -808,129 +821,129 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
                 BtnTAmountActionPerformed(evt);
             }
         });
-        jPanel3.add(BtnTAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 480, 80));
+        jPanel3.add(BtnTAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 480, 80));
 
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 0));
         jLabel3.setText("Min : ");
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 550, 110, 70));
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 590, 110, 70));
 
         jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 0));
         jLabel4.setText("Average : ");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1250, 550, -1, 70));
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 590, -1, 70));
 
         TxtMaxtripDistance.setBackground(new java.awt.Color(102, 102, 102));
         TxtMaxtripDistance.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         TxtMaxtripDistance.setForeground(new java.awt.Color(255, 255, 255));
         TxtMaxtripDistance.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
-        jPanel3.add(TxtMaxtripDistance, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 550, 180, 70));
+        jPanel3.add(TxtMaxtripDistance, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 590, 180, 70));
 
         TxtMinTripDist.setBackground(new java.awt.Color(102, 102, 102));
         TxtMinTripDist.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         TxtMinTripDist.setForeground(new java.awt.Color(255, 255, 255));
         TxtMinTripDist.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
-        jPanel3.add(TxtMinTripDist, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 550, 180, 70));
+        jPanel3.add(TxtMinTripDist, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 590, 180, 70));
 
         TxtResTripDist.setBackground(new java.awt.Color(102, 102, 102));
         TxtResTripDist.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         TxtResTripDist.setForeground(new java.awt.Color(255, 255, 255));
         TxtResTripDist.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
         TxtResTripDist.setPreferredSize(null);
-        jPanel3.add(TxtResTripDist, new org.netbeans.lib.awtextra.AbsoluteConstraints(1430, 550, 200, 70));
+        jPanel3.add(TxtResTripDist, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 590, 200, 70));
 
         jLabel23.setBackground(new java.awt.Color(0, 0, 0));
         jLabel23.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(255, 255, 0));
         jLabel23.setText("Max : ");
-        jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 550, 110, 70));
+        jPanel3.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 590, 110, 70));
 
         jLabel24.setBackground(new java.awt.Color(0, 0, 0));
         jLabel24.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(255, 255, 0));
         jLabel24.setText("Max : ");
-        jPanel3.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 130, 110, 70));
+        jPanel3.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 170, 110, 70));
 
         TxtMaxTAmount.setBackground(new java.awt.Color(102, 102, 102));
         TxtMaxTAmount.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         TxtMaxTAmount.setForeground(new java.awt.Color(255, 255, 255));
         TxtMaxTAmount.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
-        jPanel3.add(TxtMaxTAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 130, 180, 70));
+        jPanel3.add(TxtMaxTAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 170, 180, 70));
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 0));
         jLabel7.setText("Min : ");
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 130, 110, 70));
+        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 170, 110, 70));
 
         TxtMinTamount.setBackground(new java.awt.Color(102, 102, 102));
         TxtMinTamount.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         TxtMinTamount.setForeground(new java.awt.Color(255, 255, 255));
         TxtMinTamount.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
-        jPanel3.add(TxtMinTamount, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 130, 180, 70));
+        jPanel3.add(TxtMinTamount, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 170, 180, 70));
 
         jLabel8.setBackground(new java.awt.Color(0, 0, 0));
         jLabel8.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 0));
         jLabel8.setText("Average : ");
-        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 130, -1, 70));
+        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 170, -1, 70));
 
-        TxtResTamount.setBackground(new java.awt.Color(102, 102, 102));
-        TxtResTamount.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
-        TxtResTamount.setForeground(new java.awt.Color(255, 255, 255));
-        TxtResTamount.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
-        jPanel3.add(TxtResTamount, new org.netbeans.lib.awtextra.AbsoluteConstraints(1440, 130, 200, 70));
+        TxtResTripTime.setBackground(new java.awt.Color(102, 102, 102));
+        TxtResTripTime.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        TxtResTripTime.setForeground(new java.awt.Color(255, 255, 255));
+        TxtResTripTime.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
+        jPanel3.add(TxtResTripTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(1430, 10, 200, 70));
 
         jLabel28.setBackground(new java.awt.Color(0, 0, 0));
         jLabel28.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(255, 255, 0));
         jLabel28.setText("Max : ");
-        jPanel3.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 330, 110, 70));
+        jPanel3.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 370, 110, 70));
 
         TxxtMinPasCount.setBackground(new java.awt.Color(102, 102, 102));
         TxxtMinPasCount.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         TxxtMinPasCount.setForeground(new java.awt.Color(255, 255, 255));
         TxxtMinPasCount.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
-        jPanel3.add(TxxtMinPasCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 330, 180, 70));
+        jPanel3.add(TxxtMinPasCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 370, 180, 70));
 
         jLabel9.setBackground(new java.awt.Color(0, 0, 0));
         jLabel9.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 0));
         jLabel9.setText("Min : ");
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 330, 110, 70));
+        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 370, 110, 70));
 
         TxtMaxPassCount.setBackground(new java.awt.Color(102, 102, 102));
         TxtMaxPassCount.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         TxtMaxPassCount.setForeground(new java.awt.Color(255, 255, 255));
         TxtMaxPassCount.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
-        jPanel3.add(TxtMaxPassCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 330, 180, 70));
+        jPanel3.add(TxtMaxPassCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 370, 180, 70));
 
         jLabel11.setBackground(new java.awt.Color(0, 0, 0));
         jLabel11.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 0));
         jLabel11.setText("Average : ");
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1250, 330, -1, 70));
+        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 370, -1, 70));
 
         TxtResPCount.setBackground(new java.awt.Color(102, 102, 102));
         TxtResPCount.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
         TxtResPCount.setForeground(new java.awt.Color(255, 255, 255));
         TxtResPCount.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
         TxtResPCount.setPreferredSize(null);
-        jPanel3.add(TxtResPCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(1430, 330, 200, 70));
+        jPanel3.add(TxtResPCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(1410, 370, 200, 70));
 
         SpnPassCOUNTMin.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         SpnPassCOUNTMin.setAutoscrolls(true);
-        jPanel3.add(SpnPassCOUNTMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 420, 130, 40));
+        jPanel3.add(SpnPassCOUNTMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 460, 130, 40));
 
         SpnTripDistMin.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         SpnTripDistMin.setAutoscrolls(true);
-        jPanel3.add(SpnTripDistMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 640, 130, 40));
+        jPanel3.add(SpnTripDistMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 680, 130, 40));
 
         SpnTotAmountMin.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         SpnTotAmountMin.setAutoscrolls(true);
-        jPanel3.add(SpnTotAmountMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 130, 40));
+        jPanel3.add(SpnTotAmountMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 130, 40));
 
         radioDistTotAmount.setBackground(new java.awt.Color(0, 0, 0));
         radioDistTotAmount.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -946,7 +959,7 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
                 radioDistTotAmountActionPerformed(evt);
             }
         });
-        jPanel3.add(radioDistTotAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, -1, -1));
+        jPanel3.add(radioDistTotAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 280, -1, -1));
 
         radioDistTripdist.setBackground(new java.awt.Color(0, 0, 0));
         radioDistTripdist.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -957,7 +970,7 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
                 radioDistTripdistMouseClicked(evt);
             }
         });
-        jPanel3.add(radioDistTripdist, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 650, -1, -1));
+        jPanel3.add(radioDistTripdist, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 690, -1, -1));
 
         radioDistPassCount.setBackground(new java.awt.Color(0, 0, 0));
         radioDistPassCount.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -973,7 +986,7 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
                 radioDistPassCountActionPerformed(evt);
             }
         });
-        jPanel3.add(radioDistPassCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 430, -1, -1));
+        jPanel3.add(radioDistPassCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 470, -1, -1));
 
         BtnPassCount.setBackground(new java.awt.Color(102, 102, 102));
         BtnPassCount.setText("See Graphics Passenger Count");
@@ -983,12 +996,12 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
                 BtnPassCountActionPerformed(evt);
             }
         });
-        jPanel3.add(BtnPassCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 430, 410, 50));
+        jPanel3.add(BtnPassCount, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 470, 410, 50));
 
         BtnTrpDist.setBackground(new java.awt.Color(102, 102, 102));
         BtnTrpDist.setText("See Graphics Trip Distance");
         BtnTrpDist.setFont(new java.awt.Font("Roboto Bold", 1, 24)); // NOI18N
-        jPanel3.add(BtnTrpDist, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 650, 350, 50));
+        jPanel3.add(BtnTrpDist, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 690, 350, 50));
 
         BtnTotAmount.setBackground(new java.awt.Color(102, 102, 102));
         BtnTotAmount.setText("See Graphics Total Amount");
@@ -998,7 +1011,7 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
                 BtnTotAmountActionPerformed(evt);
             }
         });
-        jPanel3.add(BtnTotAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 230, 350, 50));
+        jPanel3.add(BtnTotAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 270, 350, 50));
 
         BtnDistCalc.setText("Calculate");
         BtnDistCalc.setFont(new java.awt.Font("Roboto Bold", 1, 24)); // NOI18N
@@ -1007,19 +1020,104 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
                 BtnDistCalcActionPerformed(evt);
             }
         });
-        jPanel3.add(BtnDistCalc, new org.netbeans.lib.awtextra.AbsoluteConstraints(1390, 700, 230, 50));
+        jPanel3.add(BtnDistCalc, new org.netbeans.lib.awtextra.AbsoluteConstraints(1370, 740, 230, 50));
 
         SpnTotAmountMax.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         SpnTotAmountMax.setAutoscrolls(true);
-        jPanel3.add(SpnTotAmountMax, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 130, 40));
+        jPanel3.add(SpnTotAmountMax, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, 130, 40));
 
         SpnPassCOUNTMax.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         SpnPassCOUNTMax.setAutoscrolls(true);
-        jPanel3.add(SpnPassCOUNTMax, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 420, 130, 40));
+        jPanel3.add(SpnPassCOUNTMax, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 460, 130, 40));
 
         SpnTripDistMax.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         SpnTripDistMax.setAutoscrolls(true);
-        jPanel3.add(SpnTripDistMax, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 640, 130, 40));
+        jPanel3.add(SpnTripDistMax, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 680, 130, 40));
+
+        BtnTripTime1.setBackground(new java.awt.Color(102, 102, 102));
+        BtnTripTime1.setText("Distrubition Of Trip Time");
+        BtnTripTime1.setFont(new java.awt.Font("Roboto Bold", 1, 24)); // NOI18N
+        BtnTripTime1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BtnTripTime1MouseClicked(evt);
+            }
+        });
+        BtnTripTime1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnTripTime1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(BtnTripTime1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 480, 80));
+
+        jLabel25.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel25.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel25.setText("Max : ");
+        jPanel3.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 10, 110, 70));
+
+        TxtMaxTripTime1.setBackground(new java.awt.Color(102, 102, 102));
+        TxtMaxTripTime1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        TxtMaxTripTime1.setForeground(new java.awt.Color(255, 255, 255));
+        TxtMaxTripTime1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
+        jPanel3.add(TxtMaxTripTime1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 10, 180, 70));
+
+        jLabel14.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel14.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel14.setText("Min : ");
+        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 10, 110, 70));
+
+        TxtMinTripTime1.setBackground(new java.awt.Color(102, 102, 102));
+        TxtMinTripTime1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        TxtMinTripTime1.setForeground(new java.awt.Color(255, 255, 255));
+        TxtMinTripTime1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
+        jPanel3.add(TxtMinTripTime1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 10, 180, 70));
+
+        jLabel15.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel15.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 0));
+        jLabel15.setText("Average : ");
+        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(1250, 10, -1, 70));
+
+        BtnTotAmount1.setBackground(new java.awt.Color(102, 102, 102));
+        BtnTotAmount1.setText("See Graphics Total Amount");
+        BtnTotAmount1.setFont(new java.awt.Font("Roboto Bold", 1, 24)); // NOI18N
+        BtnTotAmount1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnTotAmount1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(BtnTotAmount1, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 110, 350, 50));
+
+        radioTripTime1.setBackground(new java.awt.Color(0, 0, 0));
+        radioTripTime1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        radioTripTime1.setForeground(new java.awt.Color(255, 255, 255));
+        radioTripTime1.setText("Search By Trip Time");
+        radioTripTime1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                radioTripTime1MouseClicked(evt);
+            }
+        });
+        radioTripTime1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioTripTime1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(radioTripTime1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 120, -1, -1));
+
+        SpnTripTimeMax1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        SpnTripTimeMax1.setAutoscrolls(true);
+        jPanel3.add(SpnTripTimeMax1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, 130, 40));
+
+        SpnTripTimeMin1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        SpnTripTimeMin1.setAutoscrolls(true);
+        jPanel3.add(SpnTripTimeMin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 110, 130, 40));
+
+        TxtResTamount1.setBackground(new java.awt.Color(102, 102, 102));
+        TxtResTamount1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        TxtResTamount1.setForeground(new java.awt.Color(255, 255, 255));
+        TxtResTamount1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
+        jPanel3.add(TxtResTamount1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1420, 170, 200, 70));
 
         jTabbedPane1.addTab("Distrubition", jPanel3);
 
@@ -1076,7 +1174,7 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1823, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1784,19 +1882,19 @@ static boolean test;
     }//GEN-LAST:event_BtnEliminActionPerformed
 
     private void BtnTAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTAmountActionPerformed
-        TxtResTamount.setText(operationDataBase.getAver(tableData, 17)+"");
+        TxtResTamount1.setText(operationDataBase.getAver(tableData, 18)+"");
         TxtMaxTAmount.setText("31107.91");
         TxtMinTamount.setText("-300.3");
     }//GEN-LAST:event_BtnTAmountActionPerformed
 
     private void BtnPCountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPCountActionPerformed
-TxtResPCount.setText(operationDataBase.getAver(tableData,4)+"");
+TxtResPCount.setText(operationDataBase.getAver(tableData,5)+"");
 TxxtMinPasCount.setText("9");
 TxtMaxPassCount.setText("0");
     }//GEN-LAST:event_BtnPCountActionPerformed
-
+//hna than bdlte pcq nrml tab tbdel ki wdna 1 
     private void BtnTripDistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTripDistActionPerformed
-       TxtResTripDist.setText(operationDataBase.getAver(tableData,5)+"");
+       TxtResTripDist.setText(operationDataBase.getAver(tableData,6)+"");
       TxtMinTripDist.setText("0");
       TxtMaxtripDistance.setText("128.73");
     }//GEN-LAST:event_BtnTripDistActionPerformed
@@ -1810,6 +1908,8 @@ SpnPassCOUNTMin.setEnabled(true);
 SpnPassCOUNTMax.setEnabled(true);
 SpnTotAmountMin.setEnabled(false);
 SpnTotAmountMax.setEnabled(false);
+SpnTripTimeMax1.setEnabled(false);
+  SpnTripTimeMin1.setEnabled(false);
 }
 else if(radioDistTotAmount.isSelected())
 {
@@ -1819,7 +1919,21 @@ SpnPassCOUNTMin.setEnabled(false);
 SpnPassCOUNTMax.setEnabled(false);
 SpnTotAmountMin.setEnabled(true);
 SpnTotAmountMax.setEnabled(true);
+SpnTripTimeMax1.setEnabled(false);
+  SpnTripTimeMin1.setEnabled(false);
 }
+else if(radioTripTime1.isSelected())
+{
+      SpnTripTimeMax1.setEnabled(true);
+  SpnTripTimeMin1.setEnabled(true);
+    SpnTripDistMin.setEnabled(false);
+    SpnTripDistMax.setEnabled(false);
+SpnPassCOUNTMin.setEnabled(false);
+SpnPassCOUNTMax.setEnabled(false);
+SpnTotAmountMin.setEnabled(false);
+SpnTotAmountMax.setEnabled(false);
+}
+
 else{
   SpnTripDistMin.setEnabled(true);
   SpnTripDistMax.setEnabled(true);
@@ -1827,6 +1941,8 @@ SpnPassCOUNTMin.setEnabled(false);
 SpnPassCOUNTMax.setEnabled(false);
 SpnTotAmountMin.setEnabled(false);
 SpnTotAmountMax.setEnabled(false);
+SpnTripTimeMax1.setEnabled(false);
+  SpnTripTimeMin1.setEnabled(false);
 }
 }
     private void radioDistTotAmountMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_radioDistTotAmountMouseClicked
@@ -1859,17 +1975,18 @@ SpnTotAmountMax.setEnabled(false);
     }//GEN-LAST:event_BtnPassCountActionPerformed
 
     private void BtnDistCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDistCalcActionPerformed
-        DefaultTableModel model=(DefaultTableModel) tableData.getModel();
+        DefaultTableModel model=(DefaultTableModel) tableDistrDelete.getModel();
         model.setRowCount(0);
         if (radioDistPassCount.isSelected()){
-        operationDataBase.istogrameDist((int)SpnPassCOUNTMin.getValue(),(int) SpnPassCOUNTMax.getValue(), "passenger_count", tableData);
+        operationDataBase.istogrameDist((int)SpnPassCOUNTMin.getValue(),(int) SpnPassCOUNTMax.getValue(), "passenger_count",tableDistrDelete );  //tableData);
         }
         else if(radioDistTotAmount.isSelected())
         {
-        operationDataBase.istogrameDistDB((double)SpnTotAmountMin.getValue(),(double) SpnTotAmountMax.getValue(), "total_amount", tableData);
+        operationDataBase.istogrameDistDB((double)SpnTotAmountMin.getValue(),(double) SpnTotAmountMax.getValue(), "total_amount", tableDistrDelete);
         }
+       
         else{
-        operationDataBase.istogrameDistDB((double)SpnTripDistMin.getValue(),(double) SpnTripDistMax.getValue(), "trip_distance", tableData);
+        operationDataBase.istogrameDistDB((double)SpnTripDistMin.getValue(),(double) SpnTripDistMax.getValue(), "trip_distance", tableDistrDelete);
         }
     }//GEN-LAST:event_BtnDistCalcActionPerformed
 
@@ -1905,6 +2022,28 @@ SpnTotAmountMax.setEnabled(false);
     private void BtnElimin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnElimin1ActionPerformed
        operationDataBase.loadMatrix( tablevndid,tableExtra,tableImprovementSurcharge,tableMtaTax,tablePassangerCount,tableTotalAmount,tableTripDistance,tabMatrix);
     }//GEN-LAST:event_BtnElimin1ActionPerformed
+//hadi ana dertha mn rassi hhh 
+    private void BtnTripTime1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTripTime1ActionPerformed
+TxtResTripTime.setText(operationDataBase.getAver(tableData, 4)+"");
+        TxtMaxTripTime1.setText("10000");
+        TxtMinTripTime1.setText("-422");        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnTripTime1ActionPerformed
+
+    private void BtnTotAmount1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTotAmount1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnTotAmount1ActionPerformed
+
+    private void radioTripTime1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_radioTripTime1MouseClicked
+     DistrRadio();        // TODO add your handling code here:
+    }//GEN-LAST:event_radioTripTime1MouseClicked
+
+    private void radioTripTime1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioTripTime1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_radioTripTime1ActionPerformed
+
+    private void BtnTripTime1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BtnTripTime1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnTripTime1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -1955,7 +2094,9 @@ SpnTotAmountMax.setEnabled(false);
     private rojeru_san.RSButton BtnSave3;
     private rojeru_san.RSButton BtnTAmount;
     private rojeru_san.RSButton BtnTotAmount;
+    private rojeru_san.RSButton BtnTotAmount1;
     private rojeru_san.RSButton BtnTripDist;
+    private rojeru_san.RSButton BtnTripTime1;
     private rojeru_san.RSButton BtnTrpDist;
     private javax.swing.JSpinner SpnPassCOUNTMax;
     private javax.swing.JSpinner SpnPassCOUNTMin;
@@ -1963,14 +2104,19 @@ SpnTotAmountMax.setEnabled(false);
     private javax.swing.JSpinner SpnTotAmountMin;
     private javax.swing.JSpinner SpnTripDistMax;
     private javax.swing.JSpinner SpnTripDistMin;
+    private javax.swing.JSpinner SpnTripTimeMax1;
+    private javax.swing.JSpinner SpnTripTimeMin1;
     private javax.swing.JLabel TxtMaxPassCount;
     private javax.swing.JLabel TxtMaxTAmount;
+    private javax.swing.JLabel TxtMaxTripTime1;
     private javax.swing.JLabel TxtMaxtripDistance;
     private javax.swing.JLabel TxtMinTamount;
     private javax.swing.JLabel TxtMinTripDist;
+    private javax.swing.JLabel TxtMinTripTime1;
     private javax.swing.JLabel TxtResPCount;
-    private javax.swing.JLabel TxtResTamount;
+    private javax.swing.JLabel TxtResTamount1;
     private javax.swing.JLabel TxtResTripDist;
+    private javax.swing.JLabel TxtResTripTime;
     private javax.swing.JLabel TxxtMinPasCount;
     private javax.swing.JSpinner dmin;
     private javax.swing.JSpinner extra;
@@ -1981,6 +2127,8 @@ SpnTotAmountMax.setEnabled(false);
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
@@ -1988,6 +2136,7 @@ SpnTotAmountMax.setEnabled(false);
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -2032,6 +2181,7 @@ SpnTotAmountMax.setEnabled(false);
     private javax.swing.JRadioButton radioPuloc;
     private javax.swing.JRadioButton radioTotal;
     private javax.swing.JRadioButton radioTrip;
+    private javax.swing.JRadioButton radioTripTime1;
     private javax.swing.JRadioButton radiovendor;
     private javax.swing.JTable tabMatrix;
     private javax.swing.JTable tableData;

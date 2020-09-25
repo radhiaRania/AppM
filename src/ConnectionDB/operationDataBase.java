@@ -51,11 +51,18 @@ public class operationDataBase {
            
          
           
-            String tf=String.valueOf(Integer.parseInt(tpepofdate.substring(11, 19).substring(0,2))-Integer.parseInt(tpepdate.substring(11, 19).substring(0, 2))
+           /* String tf=String.valueOf(Integer.parseInt(tpepofdate.substring(11, 19).substring(0,2))-Integer.parseInt(tpepdate.substring(11, 19).substring(0, 2))
             +":"+String.valueOf(Integer.parseInt(tpepofdate.substring(11, 19).substring(3,5))-Integer.parseInt(tpepdate.substring(11, 19).substring(3,5 ))+":"+
                     String.valueOf(Integer.parseInt(tpepofdate.substring(11, 19).substring(6, 8))-Integer.parseInt(tpepdate.substring(11, 19).substring(6, 8)))));
-           
-            int pc;
+           */
+                String tf=String.valueOf((Integer.parseInt(tpepofdate.substring(11, 19).substring(0,2))*3600
+            +(Integer.parseInt(tpepofdate.substring(11, 19).substring(3,5))*60+ (Integer.parseInt(tpepofdate.substring(11, 19).substring(6, 8)))))-(Integer.parseInt(tpepdate.substring(11, 19).substring(0,2))*3600
+            +(Integer.parseInt(tpepdate.substring(11, 19).substring(3,5))*60+ (Integer.parseInt(tpepdate.substring(11, 19).substring(6, 8))))));
+           int tf2;
+
+            tf2=Integer.parseInt(tf);
+                
+                int pc;
             try{
             pc=(int) dbo.get("passenger_count");
             }
@@ -177,7 +184,7 @@ public class operationDataBase {
             String cngsur="";
            
             i+=1;
-           model.addRow(new Object[]{_ID,vndID,tpepdate,tpepofdate,tf,pc,td,rc,fwd,plID,dlID,pt,fa,ext,mtx,tam,tla,impsur,ttam,cngsur});
+           model.addRow(new Object[]{_ID,vndID,tpepdate,tpepofdate,tf2,pc,td,rc,fwd,plID,dlID,pt,fa,ext,mtx,tam,tla,impsur,ttam,cngsur});
         // model.addRow(new Object[]{_ID,vndID,tpepdate,tpepofdate,pc,td,rc,fwd,plID,dlID,pt,fa,ext,mtx,tam,tla,impsur,ttam,cngsur});
             }    
        table.setModel(model);
@@ -250,7 +257,12 @@ if(val2<val)
             int vndID=(int) dbo.get("VendorID");
             String tpepdate=(String) dbo.get("tpep_pickup_date");
             String tpepofdate=(String) dbo.get("tpep_dropof_date");
-             
+               String tf=String.valueOf((Integer.parseInt(tpepofdate.substring(11, 19).substring(0,2))*3600
+            +(Integer.parseInt(tpepofdate.substring(11, 19).substring(3,5))*60+ (Integer.parseInt(tpepofdate.substring(11, 19).substring(6, 8)))))-(Integer.parseInt(tpepdate.substring(11, 19).substring(0,2))*3600
+            +(Integer.parseInt(tpepdate.substring(11, 19).substring(3,5))*60+ (Integer.parseInt(tpepdate.substring(11, 19).substring(6, 8))))));
+           int tf2;
+
+            tf2=Integer.parseInt(tf);
             int pc;
             try{
             pc=(int) dbo.get("passenger_count");
@@ -373,7 +385,7 @@ if(val2<val)
            String cngsur="";
            
             i+=1;
-           model.addRow(new Object[]{_ID,vndID,tpepdate,tpepofdate,pc,td,rc,fwd,plID,dlID,pt,fa,ext,mtx,tam,tla,impsur,ttam,cngsur});
+           model.addRow(new Object[]{_ID,vndID,tpepdate,tpepofdate,tf2,pc,td,rc,fwd,plID,dlID,pt,fa,ext,mtx,tam,tla,impsur,ttam,cngsur});
 
     }
     
@@ -413,7 +425,12 @@ if(val2>val)
             int vndID=(int) dbo.get("VendorID");
             String tpepdate=(String) dbo.get("tpep_pickup_date");
             String tpepofdate=(String) dbo.get("tpep_dropof_date");
-             
+       String tf=String.valueOf((Integer.parseInt(tpepofdate.substring(11, 19).substring(0,2))*3600
+            +(Integer.parseInt(tpepofdate.substring(11, 19).substring(3,5))*60+ (Integer.parseInt(tpepofdate.substring(11, 19).substring(6, 8)))))-(Integer.parseInt(tpepdate.substring(11, 19).substring(0,2))*3600
+            +(Integer.parseInt(tpepdate.substring(11, 19).substring(3,5))*60+ (Integer.parseInt(tpepdate.substring(11, 19).substring(6, 8))))));
+           int tf2;
+
+            tf2=Integer.parseInt(tf);        
             int pc;
             try{
             pc=(int) dbo.get("passenger_count");
@@ -536,7 +553,7 @@ if(val2>val)
            String cngsur="";
            
             i+=1;
-           model.addRow(new Object[]{_ID,vndID,tpepdate,tpepofdate,pc,td,rc,fwd,plID,dlID,pt,fa,ext,mtx,tam,tla,impsur,ttam,cngsur});
+           model.addRow(new Object[]{_ID,vndID,tpepdate,tpepofdate,tf2,pc,td,rc,fwd,plID,dlID,pt,fa,ext,mtx,tam,tla,impsur,ttam,cngsur});
 
     }
     
@@ -583,7 +600,12 @@ if(val2!=val) // && val!=0.5
             int vndID=(int) dbo.get("VendorID");
             String tpepdate=(String) dbo.get("tpep_pickup_date");
             String tpepofdate=(String) dbo.get("tpep_dropof_date");
-             
+       String tf=String.valueOf((Integer.parseInt(tpepofdate.substring(11, 19).substring(0,2))*3600
+            +(Integer.parseInt(tpepofdate.substring(11, 19).substring(3,5))*60+ (Integer.parseInt(tpepofdate.substring(11, 19).substring(6, 8)))))-(Integer.parseInt(tpepdate.substring(11, 19).substring(0,2))*3600
+            +(Integer.parseInt(tpepdate.substring(11, 19).substring(3,5))*60+ (Integer.parseInt(tpepdate.substring(11, 19).substring(6, 8))))));
+           int tf2;
+
+            tf2=Integer.parseInt(tf);        
             int pc;
             try{
             pc=(int) dbo.get("passenger_count");
@@ -706,7 +728,7 @@ if(val2!=val) // && val!=0.5
            String cngsur="";
            
             i+=1;
-           model.addRow(new Object[]{_ID,vndID,tpepdate,tpepofdate,pc,td,rc,fwd,plID,dlID,pt,fa,ext,mtx,tam,tla,impsur,ttam,cngsur});
+           model.addRow(new Object[]{_ID,vndID,tpepdate,tpepofdate,tf2,pc,td,rc,fwd,plID,dlID,pt,fa,ext,mtx,tam,tla,impsur,ttam,cngsur});
 
     }
     
@@ -752,7 +774,12 @@ if(val2<val) // && val!=0.5
             int vndID=(int) dbo.get("VendorID");
             String tpepdate=(String) dbo.get("tpep_pickup_date");
             String tpepofdate=(String) dbo.get("tpep_dropof_date");
-             
+              String tf=String.valueOf((Integer.parseInt(tpepofdate.substring(11, 19).substring(0,2))*3600
+            +(Integer.parseInt(tpepofdate.substring(11, 19).substring(3,5))*60+ (Integer.parseInt(tpepofdate.substring(11, 19).substring(6, 8)))))-(Integer.parseInt(tpepdate.substring(11, 19).substring(0,2))*3600
+            +(Integer.parseInt(tpepdate.substring(11, 19).substring(3,5))*60+ (Integer.parseInt(tpepdate.substring(11, 19).substring(6, 8))))));
+           int tf2;
+
+            tf2=Integer.parseInt(tf); 
             int pc;
             try{
             pc=(int) dbo.get("passenger_count");
@@ -875,7 +902,7 @@ if(val2<val) // && val!=0.5
            String cngsur="";
            
             i+=1;
-           model.addRow(new Object[]{_ID,vndID,tpepdate,tpepofdate,pc,td,rc,fwd,plID,dlID,pt,fa,ext,mtx,tam,tla,impsur,ttam,cngsur});
+           model.addRow(new Object[]{_ID,vndID,tpepdate,tpepofdate,tf2,pc,td,rc,fwd,plID,dlID,pt,fa,ext,mtx,tam,tla,impsur,ttam,cngsur});
 
     }
     
@@ -891,175 +918,6 @@ if(table.getModel().getRowCount()==0)
     
     }
     
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // search data 6 pour ex
-    
- /*   public static void searchData5(JTable table,String Column,double val)
-    {
-    ConnectionDB.MongoDB.Connect_MongoDB("AppMaster");
-     DefaultTableModel model=(DefaultTableModel) table.getModel();
-    DBCollection col=ConnectionDB.MongoDB.db.getCollection("taxi1");
-    DBCursor cursor=col.find();
-    int i=0;
-    while(cursor.hasNext())
-    {
-    DBObject dbo=cursor.next();
-    //Object c=(Object) dbo.get(Column);
-      //  Tools.showMessage(c+"");
-    double val2=1.0;
-   try{
-   val2=(double)dbo.get(Column);
-   }
-   catch(Exception ex)
-   {
-   int a=(int) dbo.get(Column);
-   val2*=a;
-   }
-  
-if(val2!=val) // && val!=0.5
-    {   
-            ObjectId _ID=(ObjectId) dbo.get("_id");
-            int vndID=(int) dbo.get("VendorID");
-            String tpepdate=(String) dbo.get("tpep_pickup_date");
-            String tpepofdate=(String) dbo.get("tpep_dropof_date");
-             
-            int pc;
-            try{
-            pc=(int) dbo.get("passenger_count");
-            }
-            catch(Exception e)
-            {
-            double a=(double) dbo.get("passenger_count");
-            pc=(int) a;
-            }
-            double td=1.0;
-            try{
-            td=(double) dbo.get("trip_distance");
-            }
-            catch(Exception e)
-            {
-            int a=(int) dbo.get("trip_distance");
-            td=td*a;
-            }
-            int rc;
-            try{
-            rc=(int) dbo.get("RatecodeId");
-            }
-            catch(Exception e)
-            {
-            double a=(double) dbo.get("RatecodeId");
-            rc=(int) a;
-            }
-            String fwd=(String) dbo.get("stor_and_fwd");
-            int plID;
-            try{
-            plID=(int) dbo.get("pulocationId");
-            }
-            catch(Exception e)
-            {
-            double a=(double) dbo.get("plID");
-            plID=(int)a;
-            }
-            int dlID;
-            try{
-            dlID=(int) dbo.get("dolocationid");
-            }
-            catch(Exception e)
-            {
-            double a=(double)dbo.get("dolocationid");
-            dlID=(int)a;
-            }
-            int pt;
-            try{
-            pt=(int) dbo.get("paymment_type");
-            }
-            catch(Exception e)
-            {
-            double a=(double) dbo.get("paymment_type");
-            pt=(int)a;
-            }
-            int fa;
-            try{
-            fa=(int)dbo.get("fare_amount");
-            }
-            catch(Exception e)
-            {
-            double a=(double)dbo.get("fare_amount");
-            fa=(int)a;
-            }
-            double ext=1.0;
-            try
-            {
-                ext=(double)dbo.get("extra");
-            }
-            catch(Exception e)
-            {
-            int a=(int)dbo.get("extra");
-            ext=ext*a;
-            }
-            double mtx=1.0;
-            try{
-            mtx=(double)dbo.get("mtaa_tax");
-            }
-            catch(Exception e)
-            {
-                int a=(int)dbo.get("mtaa_tax");
-                mtx=mtx*a;
-            }
-            int tam;
-            try{
-            tam=(int)dbo.get("tip_amount");
-            }
-            catch(Exception e)
-            {
-            double a=(double)dbo.get("tip_amount");
-            tam=(int)a;
-            }
-            int tla;
-            try{
-            tla=(int) dbo.get("tools_amount");
-            }
-            catch(Exception e)
-            {
-            double a=(double)dbo.get("tools_amount");
-            tla=(int)a;
-            }
-            double impsur=1.0;
-            try{
-            impsur=(double)dbo.get("improvement_surcharge");
-            }
-            catch(Exception e)
-            {
-            int a=(int) dbo.get("improvement_surcharge");
-            impsur*=a;
-            }
-            double ttam=1.0;
-            try{
-            ttam=(double)dbo.get("total_amount");
-            }
-            catch(Exception e)
-            {
-            int a=(int)dbo.get("total_amount");
-            ttam*=a;
-            }
-           String cngsur="";
-           
-            i+=1;
-           model.addRow(new Object[]{_ID,vndID,tpepdate,tpepofdate,pc,td,rc,fwd,plID,dlID,pt,fa,ext,mtx,tam,tla,impsur,ttam,cngsur});
-
-    }
-    
-    }
-if(table.getModel().getRowCount()==0)
-    {
-    Tools.showMessage("There is no erroneous recording ");
-    }
-    else{
-    table.setModel(model);
-    Tools.showMessage("The number of erroeneous records are :"+table.getModel().getRowCount()+"Rows");
-    }    
-    
-    }*/
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // search data 6 pour extra 
      public static void searchData6(JTable table,String Column,double val,double val1,double val3)
@@ -1090,7 +948,13 @@ if(val2!=val && val2!=val1 && val2!=val3) // && val!=0.5
             int vndID=(int) dbo.get("VendorID");
             String tpepdate=(String) dbo.get("tpep_pickup_date");
             String tpepofdate=(String) dbo.get("tpep_dropof_date");
-             
+    
+            String tf=String.valueOf((Integer.parseInt(tpepofdate.substring(11, 19).substring(0,2))*3600
+            +(Integer.parseInt(tpepofdate.substring(11, 19).substring(3,5))*60+ (Integer.parseInt(tpepofdate.substring(11, 19).substring(6, 8)))))-(Integer.parseInt(tpepdate.substring(11, 19).substring(0,2))*3600
+            +(Integer.parseInt(tpepdate.substring(11, 19).substring(3,5))*60+ (Integer.parseInt(tpepdate.substring(11, 19).substring(6, 8))))));
+           int tf2;
+
+            tf2=Integer.parseInt(tf);        
             int pc;
             try{
             pc=(int) dbo.get("passenger_count");
@@ -1213,7 +1077,7 @@ if(val2!=val && val2!=val1 && val2!=val3) // && val!=0.5
            String cngsur="";
            
             i+=1;
-           model.addRow(new Object[]{_ID,vndID,tpepdate,tpepofdate,pc,td,rc,fwd,plID,dlID,pt,fa,ext,mtx,tam,tla,impsur,ttam,cngsur});
+           model.addRow(new Object[]{_ID,vndID,tpepdate,tpepofdate,tf2,pc,td,rc,fwd,plID,dlID,pt,fa,ext,mtx,tam,tla,impsur,ttam,cngsur});
 
     }
     
@@ -1287,7 +1151,12 @@ if(list.get(i).equals(dbo.get("_id"))) // && val!=0.5
             int vndID=(int) dbo.get("VendorID");
             String tpepdate=(String) dbo.get("tpep_pickup_date");
             String tpepofdate=(String) dbo.get("tpep_dropof_date");
-          
+            String tf=String.valueOf((Integer.parseInt(tpepofdate.substring(11, 19).substring(0,2))*3600
+            +(Integer.parseInt(tpepofdate.substring(11, 19).substring(3,5))*60+ (Integer.parseInt(tpepofdate.substring(11, 19).substring(6, 8)))))-(Integer.parseInt(tpepdate.substring(11, 19).substring(0,2))*3600
+            +(Integer.parseInt(tpepdate.substring(11, 19).substring(3,5))*60+ (Integer.parseInt(tpepdate.substring(11, 19).substring(6, 8))))));
+           int tf2;
+
+            tf2=Integer.parseInt(tf);
             int pc;
             try{
             pc=(int) dbo.get("passenger_count");
@@ -1410,7 +1279,7 @@ if(list.get(i).equals(dbo.get("_id"))) // && val!=0.5
            String cngsur="";
            
             i+=1;
-           model.addRow(new Object[]{_ID,vndID,tpepdate,tpepofdate,pc,td,rc,fwd,plID,dlID,pt,fa,ext,mtx,tam,tla,impsur,ttam,cngsur});
+           model.addRow(new Object[]{_ID,vndID,tpepdate,tpepofdate,tf2,pc,td,rc,fwd,plID,dlID,pt,fa,ext,mtx,tam,tla,impsur,ttam,cngsur});
 
     }
     
