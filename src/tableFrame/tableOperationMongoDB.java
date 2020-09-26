@@ -8,6 +8,7 @@ package tableFrame;
 import Component.DoubleSpinner;
 import ConnectionDB.operationDataBase;
 import applicationmaster.Tools;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.util.Calendar;
@@ -17,74 +18,191 @@ import java.util.Vector;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerDateModel;
 import javax.swing.table.DefaultTableModel;
+
 import org.bson.types.ObjectId;
 
 /**
- *
  * @author benso
  */
 public class tableOperationMongoDB extends javax.swing.JFrame {
-
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private rojeru_san.RSButton BtnCalc;
+    private rojeru_san.RSButton BtnClose;
+    private rojeru_san.RSButton BtnDistCalc;
+    private rojeru_san.RSButton BtnElimin;
+    private rojeru_san.RSButton BtnElimin1;
+    private rojeru_san.RSButton BtnPCount;
+    private rojeru_san.RSButton BtnPassCount;
+    private rojeru_san.RSButton BtnRef;
+    private rojeru_san.RSButton BtnSave1;
+    private rojeru_san.RSButton BtnSave2;
+    private rojeru_san.RSButton BtnSave3;
+    private rojeru_san.RSButton BtnTAmount;
+    private rojeru_san.RSButton BtnTotAmount;
+    private rojeru_san.RSButton BtnTotAmount1;
+    private rojeru_san.RSButton BtnTripDist;
+    private rojeru_san.RSButton BtnTripTime1;
+    private rojeru_san.RSButton BtnTrpDist;
+    private javax.swing.JSpinner SpnPassCOUNTMax;
+    private javax.swing.JSpinner SpnPassCOUNTMin;
+    private javax.swing.JSpinner SpnTotAmountMax;
+    private javax.swing.JSpinner SpnTotAmountMin;
+    private javax.swing.JSpinner SpnTripDistMax;
+    private javax.swing.JSpinner SpnTripDistMin;
+    private javax.swing.JSpinner SpnTripTimeMax1;
+    private javax.swing.JSpinner SpnTripTimeMin1;
+    private javax.swing.JLabel TxtMaxPassCount;
+    private javax.swing.JLabel TxtMaxTAmount;
+    private javax.swing.JLabel TxtMaxTripTime1;
+    private javax.swing.JLabel TxtMaxtripDistance;
+    private javax.swing.JLabel TxtMinTamount;
+    private javax.swing.JLabel TxtMinTripDist;
+    private javax.swing.JLabel TxtMinTripTime1;
+    private javax.swing.JLabel TxtResPCount;
+    private javax.swing.JLabel TxtResTamount1;
+    private javax.swing.JLabel TxtResTripDist;
+    private javax.swing.JLabel TxtResTripTime;
+    private javax.swing.JLabel TxxtMinPasCount;
+    private javax.swing.JSpinner dmin;
+    private javax.swing.JSpinner extra;
+    private javax.swing.ButtonGroup groupButton;
+    private javax.swing.JSpinner improvement;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JSpinner mta;
+    private javax.swing.JPanel panelRegle;
+    private javax.swing.JPanel panelTabel;
+    private javax.swing.JSpinner pmin;
+    private javax.swing.JSpinner psmin;
+    private javax.swing.JSpinner pymax;
+    private javax.swing.JSpinner pymin;
+    private javax.swing.JRadioButton radioDistPassCount;
+    private javax.swing.JRadioButton radioDistTotAmount;
+    private javax.swing.JRadioButton radioDistTripdist;
+    private javax.swing.JRadioButton radioDoloc;
+    private javax.swing.JRadioButton radioExtra;
+    private javax.swing.JRadioButton radioImpro;
+    private javax.swing.JRadioButton radioMta;
+    private javax.swing.JRadioButton radioP;
+    private javax.swing.JRadioButton radioPaymment;
+    private javax.swing.JRadioButton radioPuloc;
+    private javax.swing.JRadioButton radioTotal;
+    private javax.swing.JRadioButton radioTrip;
+    private javax.swing.JRadioButton radioTripTime1;
+    private javax.swing.JRadioButton radiovendor;
+    private javax.swing.JTable tabMatrix;
+    private javax.swing.JTable tableData;
+    private javax.swing.JTable tableDelete;
+    private javax.swing.JTable tableDistrDelete;
+    private javax.swing.JTable tableExtra;
+    private javax.swing.JTable tableImprovementSurcharge;
+    private javax.swing.JTable tableMtaTax;
+    private javax.swing.JTable tablePassangerCount;
+    private javax.swing.JTable tableTotalAmount;
+    private javax.swing.JTable tableTripDistance;
+    private javax.swing.JTable tablevndid;
+    private javax.swing.JSpinner totalmax;
+    private javax.swing.JSpinner totalmin;
+    private javax.swing.JSpinner tr;
+    private javax.swing.JSpinner vimin;
     /**
      * Creates new form tableOperationMongoDB
      */
     public tableOperationMongoDB() {
         initComponents();
-       
-         tableData.getTableHeader().setFont(new Font("Segoe UI",Font.BOLD,18));
+
+        tableData.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 18));
         tableData.getTableHeader().setOpaque(false);
-        tableData.getTableHeader().setBackground(new Color(32,136,203));
-        tableData.getTableHeader().setForeground(new Color(255,255,255));
+        tableData.getTableHeader().setBackground(new Color(32, 136, 203));
+        tableData.getTableHeader().setForeground(new Color(255, 255, 255));
         tableData.setRowHeight(25);
-        tableDelete.getTableHeader().setFont(new Font("Segoe UI",Font.BOLD,18));
+        tableDelete.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 18));
         tableDelete.getTableHeader().setOpaque(false);
-        tableDelete.getTableHeader().setBackground(new Color(32,136,203));
-        tableDelete.getTableHeader().setForeground(new Color(255,255,255));
+        tableDelete.getTableHeader().setBackground(new Color(32, 136, 203));
+        tableDelete.getTableHeader().setForeground(new Color(255, 255, 255));
         tableDelete.setRowHeight(25);
-        tableDistrDelete.getTableHeader().setFont(new Font("Segoe UI",Font.BOLD,18));
+        tableDistrDelete.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 18));
         tableDistrDelete.getTableHeader().setOpaque(false);
-        tableDistrDelete.getTableHeader().setBackground(new Color(32,136,203));
-        tableDistrDelete.getTableHeader().setForeground(new Color(255,255,255));
+        tableDistrDelete.getTableHeader().setBackground(new Color(32, 136, 203));
+        tableDistrDelete.getTableHeader().setForeground(new Color(255, 255, 255));
         tableDistrDelete.setRowHeight(25);
-        tablevndid.getTableHeader().setFont(new Font("Segoe UI",Font.BOLD,18));
+        tablevndid.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 18));
         tablevndid.getTableHeader().setOpaque(false);
-        tablevndid.getTableHeader().setBackground(new Color(32,136,203));
-        tablevndid.getTableHeader().setForeground(new Color(255,255,255));
+        tablevndid.getTableHeader().setBackground(new Color(32, 136, 203));
+        tablevndid.getTableHeader().setForeground(new Color(255, 255, 255));
         tablevndid.setRowHeight(25);
-        tableExtra.getTableHeader().setFont(new Font("Segoe UI",Font.BOLD,18));
+        tableExtra.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 18));
         tableExtra.getTableHeader().setOpaque(false);
-        tableExtra.getTableHeader().setBackground(new Color(32,136,203));
-        tableExtra.getTableHeader().setForeground(new Color(255,255,255));
+        tableExtra.getTableHeader().setBackground(new Color(32, 136, 203));
+        tableExtra.getTableHeader().setForeground(new Color(255, 255, 255));
         tableExtra.setRowHeight(25);
-        tableImprovementSurcharge.getTableHeader().setFont(new Font("Segoe UI",Font.BOLD,18));
+        tableImprovementSurcharge.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 18));
         tableImprovementSurcharge.getTableHeader().setOpaque(false);
-        tableImprovementSurcharge.getTableHeader().setBackground(new Color(32,136,203));
-        tableImprovementSurcharge.getTableHeader().setForeground(new Color(255,255,255));
+        tableImprovementSurcharge.getTableHeader().setBackground(new Color(32, 136, 203));
+        tableImprovementSurcharge.getTableHeader().setForeground(new Color(255, 255, 255));
         tableImprovementSurcharge.setRowHeight(25);
-        tableMtaTax.getTableHeader().setFont(new Font("Segoe UI",Font.BOLD,18));
+        tableMtaTax.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 18));
         tableMtaTax.getTableHeader().setOpaque(false);
-        tableMtaTax.getTableHeader().setBackground(new Color(32,136,203));
-        tableMtaTax.getTableHeader().setForeground(new Color(255,255,255));
+        tableMtaTax.getTableHeader().setBackground(new Color(32, 136, 203));
+        tableMtaTax.getTableHeader().setForeground(new Color(255, 255, 255));
         tableMtaTax.setRowHeight(25);
-        tablePassangerCount.getTableHeader().setFont(new Font("Segoe UI",Font.BOLD,18));
+        tablePassangerCount.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 18));
         tablePassangerCount.getTableHeader().setOpaque(false);
-        tablePassangerCount.getTableHeader().setBackground(new Color(32,136,203));
-        tablePassangerCount.getTableHeader().setForeground(new Color(255,255,255));
+        tablePassangerCount.getTableHeader().setBackground(new Color(32, 136, 203));
+        tablePassangerCount.getTableHeader().setForeground(new Color(255, 255, 255));
         tablePassangerCount.setRowHeight(25);
-        tableTotalAmount.getTableHeader().setFont(new Font("Segoe UI",Font.BOLD,18));
+        tableTotalAmount.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 18));
         tableTotalAmount.getTableHeader().setOpaque(false);
-        tableTotalAmount.getTableHeader().setBackground(new Color(32,136,203));
-        tableTotalAmount.getTableHeader().setForeground(new Color(255,255,255));
-        tableTripDistance.getTableHeader().setFont(new Font("Segoe UI",Font.BOLD,18));
+        tableTotalAmount.getTableHeader().setBackground(new Color(32, 136, 203));
+        tableTotalAmount.getTableHeader().setForeground(new Color(255, 255, 255));
+        tableTripDistance.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 18));
         tableTripDistance.getTableHeader().setOpaque(false);
-        tableTripDistance.getTableHeader().setBackground(new Color(32,136,203));
-        tableTripDistance.getTableHeader().setForeground(new Color(255,255,255));
-        tabMatrix.getTableHeader().setFont(new Font("Segoe UI",Font.BOLD,18));
+        tableTripDistance.getTableHeader().setBackground(new Color(32, 136, 203));
+        tableTripDistance.getTableHeader().setForeground(new Color(255, 255, 255));
+        tabMatrix.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 18));
         tabMatrix.getTableHeader().setOpaque(false);
-        tabMatrix.getTableHeader().setBackground(new Color(32,136,203));
-        tabMatrix.getTableHeader().setForeground(new Color(255,255,255));
+        tabMatrix.getTableHeader().setBackground(new Color(32, 136, 203));
+        tabMatrix.getTableHeader().setForeground(new Color(255, 255, 255));
         tabMatrix.setRowHeight(25);
-        
+
     }
 
     /**
@@ -236,19 +354,19 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
 
         tableData.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         tableData.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+            new Object[][]{
 
             },
-            new String [] {
-                "ObjectID", "VendorID", "pickup_Date", "dropof_Date", "Trip_Time", "Passenger_Count ", "Trip_Distance ", "RatecodeId ", "Stor_And_Fwd ", "PulocationId ", "DolocationId ", "Paymment_Type ", "Fare_Amount ", "Extra ", "Mta_Tax ", "Tip_Amount", "Tools_Amount ", "Improvement_Surcharge", "Total_Amount ", "Congestion_Surcharge"
+            new String[]{
+                "ObjectID", "VendorID", "pickup_Date", "dropof_Date", "Trip_Time", "intervalClass","intervalClassCount","Passenger_Count ", "Trip_Distance ", "RatecodeId ", "Stor_And_Fwd ", "PulocationId ", "DolocationId ", "Paymment_Type ", "Fare_Amount ", "Extra ", "Mta_Tax ", "Tip_Amount", "Tools_Amount ", "Improvement_Surcharge", "Total_Amount ", "Congestion_Surcharge"
             }
         ) {
-            boolean[] canEdit = new boolean [] {
+            boolean[] canEdit = new boolean[]{
                 false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+                return canEdit[columnIndex];
             }
         });
         tableData.setFocusable(false);
@@ -556,19 +674,19 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
 
         tableExtra.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         tableExtra.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+            new Object[][]{
 
             },
-            new String [] {
+            new String[]{
                 "Rules3Extra"
             }
         ) {
-            boolean[] canEdit = new boolean [] {
+            boolean[] canEdit = new boolean[]{
                 false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+                return canEdit[columnIndex];
             }
         });
         tableExtra.setFocusable(false);
@@ -583,19 +701,19 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
 
         tableTotalAmount.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         tableTotalAmount.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+            new Object[][]{
 
             },
-            new String [] {
+            new String[]{
                 "Rules8TotalAmount"
             }
         ) {
-            boolean[] canEdit = new boolean [] {
+            boolean[] canEdit = new boolean[]{
                 false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+                return canEdit[columnIndex];
             }
         });
         tableTotalAmount.setFocusable(false);
@@ -610,19 +728,19 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
 
         tableMtaTax.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         tableMtaTax.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+            new Object[][]{
 
             },
-            new String [] {
+            new String[]{
                 "Rules4MtaTax"
             }
         ) {
-            boolean[] canEdit = new boolean [] {
+            boolean[] canEdit = new boolean[]{
                 false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+                return canEdit[columnIndex];
             }
         });
         tableMtaTax.setFocusable(false);
@@ -637,19 +755,19 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
 
         tableImprovementSurcharge.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         tableImprovementSurcharge.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+            new Object[][]{
 
             },
-            new String [] {
+            new String[]{
                 "Rules5ImprovementSurcharge"
             }
         ) {
-            boolean[] canEdit = new boolean [] {
+            boolean[] canEdit = new boolean[]{
                 false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+                return canEdit[columnIndex];
             }
         });
         tableImprovementSurcharge.setFocusable(false);
@@ -664,19 +782,19 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
 
         tableTripDistance.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         tableTripDistance.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+            new Object[][]{
 
             },
-            new String [] {
+            new String[]{
                 "Rules6TripDistance"
             }
         ) {
-            boolean[] canEdit = new boolean [] {
+            boolean[] canEdit = new boolean[]{
                 false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+                return canEdit[columnIndex];
             }
         });
         tableTripDistance.setFocusable(false);
@@ -691,19 +809,19 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
 
         tablePassangerCount.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         tablePassangerCount.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+            new Object[][]{
 
             },
-            new String [] {
+            new String[]{
                 "Rules7PassengerCount"
             }
         ) {
-            boolean[] canEdit = new boolean [] {
+            boolean[] canEdit = new boolean[]{
                 false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+                return canEdit[columnIndex];
             }
         });
         tablePassangerCount.setFocusable(false);
@@ -718,19 +836,19 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
 
         tablevndid.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         tablevndid.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+            new Object[][]{
 
             },
-            new String [] {
+            new String[]{
                 "Rules1VendeurID"
             }
         ) {
-            boolean[] canEdit = new boolean [] {
+            boolean[] canEdit = new boolean[]{
                 false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+                return canEdit[columnIndex];
             }
         });
         tablevndid.setFocusable(false);
@@ -750,10 +868,10 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
 
         tableDelete.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         tableDelete.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+            new Object[][]{
 
             },
-            new String [] {
+            new String[]{
                 "ObjectID", "VendorID", "pickup_Date", "dropof_Date", "Passenger_Count ", "Trip_Distance ", "RatecodeId ", "Stor_And_Fwd ", "PulocationId ", "DolocationId ", "Paymment_Type ", "Fare_Amount ", "Extra ", "Mta_Tax ", "Tip_Amount", "Tools_Amount ", "Improvement_Surcharge", "Total_Amount ", "Congestion_Surcharge"
             }
         ));
@@ -1126,10 +1244,10 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
 
         tableDistrDelete.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         tableDistrDelete.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+            new Object[][]{
 
             },
-            new String [] {
+            new String[]{
                 "ObjectID", "VendorID", "pickup_Date", "dropof_Date", "Passenger_Count ", "Trip_Distance ", "RatecodeId ", "Stor_And_Fwd ", "PulocationId ", "DolocationId ", "Paymment_Type ", "Fare_Amount ", "Extra ", "Mta_Tax ", "Tip_Amount", "Tools_Amount ", "Improvement_Surcharge", "Total_Amount ", "Congestion_Surcharge"
             }
         ));
@@ -1149,19 +1267,19 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tabMatrix.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+            new Object[][]{
 
             },
-            new String [] {
+            new String[]{
                 "ObjectID", "col1", "col2", "col3", "col4", "col5", "col6  ", "col7", "col8 "
             }
         ) {
-            boolean[] canEdit = new boolean [] {
+            boolean[] canEdit = new boolean[]{
                 false, false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+                return canEdit[columnIndex];
             }
         });
         jScrollPane2.setViewportView(tabMatrix);
@@ -1174,248 +1292,232 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1823, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1823, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-   public void radioButton()
-   {
-   if(radiovendor.isSelected())
-   {
-   vimin.setEnabled(true);
-   
 
-   psmin.setEnabled(false);
-  
-   tr.setEnabled(false);
-   
-   pmin.setEnabled(false);
-   
-     dmin.setEnabled(false);
-   
-   pymin.setEnabled(false);
-   pymax.setEnabled(false);
-   
-   extra.setEnabled(false);
-   mta.setEnabled(false);
-   
-   totalmin.setEnabled(false);
-   totalmax.setEnabled(false);
-       
-       improvement.setEnabled(false);
-   }
-   else if(radioTrip.isSelected()){
-       tr.setEnabled(true);
-       vimin.setEnabled(false);
-   
+    public void radioButton() {
+        if (radiovendor.isSelected()) {
+            vimin.setEnabled(true);
 
-   psmin.setEnabled(false);
-   
-   pmin.setEnabled(false);
-  
-     dmin.setEnabled(false);
-  
-   pymin.setEnabled(false);
-   pymax.setEnabled(false);
-   
-   extra.setEnabled(false);
-   mta.setEnabled(false);
-   
-   totalmin.setEnabled(false);
-   totalmax.setEnabled(false);
-     
-   improvement.setEnabled(false);
-   }
-    else if(radioTotal.isSelected()){
-        totalmin.setEnabled(true);
-   totalmax.setEnabled(true);
-       tr.setEnabled(false);
-       vimin.setEnabled(false);
 
-   psmin.setEnabled(false);
-   
-   pmin.setEnabled(false);
-  
-   pymin.setEnabled(false);
-   pymax.setEnabled(false);
-   extra.setEnabled(false);
-   mta.setEnabled(false);
-  
-     dmin.setEnabled(false);
-   
-   improvement.setEnabled(false);
-   
-   }
-      
-    
-   else if(radioPuloc .isSelected()){
-       pmin.setEnabled(true);
-      dmin.setEnabled(false);
-   
-   totalmin.setEnabled(false);
-   totalmax.setEnabled(false);
-   tr.setEnabled(false);
-   vimin.setEnabled(false);
-   
+            psmin.setEnabled(false);
 
-   psmin.setEnabled(false);
-   
-   pymin.setEnabled(false);
-   pymax.setEnabled(false);
-   extra.setEnabled(false);
-   mta.setEnabled(false);
-   improvement.setEnabled(false);
-   
-   }
-   else if(radioPaymment .isSelected()){
-       pymin.setEnabled(true);
-   pymax.setEnabled(true);
-  
-   totalmin.setEnabled(false);
-   totalmax.setEnabled(false);
-   tr.setEnabled(false);
-   vimin.setEnabled(false);
-   psmin.setEnabled(false);
-  
-   pmin.setEnabled(false);
-   
-   extra.setEnabled(false);
-   mta.setEnabled(false);
-   improvement.setEnabled(false);
-  dmin.setEnabled(false);
-      
-   }
-   else if(radioP .isSelected()){
-        psmin.setEnabled(true);
-   
-   totalmin.setEnabled(false);
-   totalmax.setEnabled(false);
-   tr.setEnabled(false);
-   vimin.setEnabled(false);
-   pmin.setEnabled(false);
-  
-   pymin.setEnabled(false);
-   pymax.setEnabled(false);
-  
-   extra.setEnabled(false);
-   mta.setEnabled(false);
-   improvement.setEnabled(false);
-  dmin.setEnabled(false);
-     
-   }
-   else if(radioMta .isSelected()){
-       mta.setEnabled(true);
-        
-   totalmin.setEnabled(false);
-   totalmax.setEnabled(false);
-   tr.setEnabled(false);
-   vimin.setEnabled(false);
-   
+            tr.setEnabled(false);
 
-   psmin.setEnabled(false);
-   
-   pmin.setEnabled(false);
-   
-   pymin.setEnabled(false);
-   pymax.setEnabled(false);
- 
-   extra.setEnabled(false);
-     dmin.setEnabled(false);
-  
-   improvement.setEnabled(false);
-   
-   }
-   else if(radioImpro.isSelected()){
-       improvement.setEnabled(true);
-   totalmin.setEnabled(false);
-   totalmax.setEnabled(false);
-   tr.setEnabled(false);
-   vimin.setEnabled(false);
-   psmin.setEnabled(false);
-  
-   pmin.setEnabled(false);
-   
-   pymin.setEnabled(false);
-   pymax.setEnabled(false);
-   
-   extra.setEnabled(false);
-   mta.setEnabled(false);
-     dmin.setEnabled(false);
- 
-   
-   }
-   
-   else if(radioExtra .isSelected()){
-       extra.setEnabled(true);
-       improvement.setEnabled(false);
-        
-   totalmin.setEnabled(false);
-   totalmax.setEnabled(true);
-   tr.setEnabled(false);
-   vimin.setEnabled(false);
-   
+            pmin.setEnabled(false);
 
-   psmin.setEnabled(false);
-  
-   pmin.setEnabled(false);
-   
-   pymin.setEnabled(false);
-   pymax.setEnabled(true);
-   mta.setEnabled(false);
-   
-     dmin.setEnabled(false);
-   }
-   else if(radioDoloc .isSelected()){
-         dmin.setEnabled(true);
-       improvement.setEnabled(false);    
-   totalmin.setEnabled(false);
-   totalmax.setEnabled(false);
-   tr.setEnabled(false);
-   vimin.setEnabled(false);
-   psmin.setEnabled(false);
-   pmin.setEnabled(false);
-   pymin.setEnabled(false);
-   pymax.setEnabled(false);
-   extra.setEnabled(false);
-   mta.setEnabled(false);
-   
-   
-   }
-     
-   
-   
-   
-   
-   
-   }
+            dmin.setEnabled(false);
+
+            pymin.setEnabled(false);
+            pymax.setEnabled(false);
+
+            extra.setEnabled(false);
+            mta.setEnabled(false);
+
+            totalmin.setEnabled(false);
+            totalmax.setEnabled(false);
+
+            improvement.setEnabled(false);
+        } else if (radioTrip.isSelected()) {
+            tr.setEnabled(true);
+            vimin.setEnabled(false);
+
+
+            psmin.setEnabled(false);
+
+            pmin.setEnabled(false);
+
+            dmin.setEnabled(false);
+
+            pymin.setEnabled(false);
+            pymax.setEnabled(false);
+
+            extra.setEnabled(false);
+            mta.setEnabled(false);
+
+            totalmin.setEnabled(false);
+            totalmax.setEnabled(false);
+
+            improvement.setEnabled(false);
+        } else if (radioTotal.isSelected()) {
+            totalmin.setEnabled(true);
+            totalmax.setEnabled(true);
+            tr.setEnabled(false);
+            vimin.setEnabled(false);
+
+            psmin.setEnabled(false);
+
+            pmin.setEnabled(false);
+
+            pymin.setEnabled(false);
+            pymax.setEnabled(false);
+            extra.setEnabled(false);
+            mta.setEnabled(false);
+
+            dmin.setEnabled(false);
+
+            improvement.setEnabled(false);
+
+        } else if (radioPuloc.isSelected()) {
+            pmin.setEnabled(true);
+            dmin.setEnabled(false);
+
+            totalmin.setEnabled(false);
+            totalmax.setEnabled(false);
+            tr.setEnabled(false);
+            vimin.setEnabled(false);
+
+
+            psmin.setEnabled(false);
+
+            pymin.setEnabled(false);
+            pymax.setEnabled(false);
+            extra.setEnabled(false);
+            mta.setEnabled(false);
+            improvement.setEnabled(false);
+
+        } else if (radioPaymment.isSelected()) {
+            pymin.setEnabled(true);
+            pymax.setEnabled(true);
+
+            totalmin.setEnabled(false);
+            totalmax.setEnabled(false);
+            tr.setEnabled(false);
+            vimin.setEnabled(false);
+            psmin.setEnabled(false);
+
+            pmin.setEnabled(false);
+
+            extra.setEnabled(false);
+            mta.setEnabled(false);
+            improvement.setEnabled(false);
+            dmin.setEnabled(false);
+
+        } else if (radioP.isSelected()) {
+            psmin.setEnabled(true);
+
+            totalmin.setEnabled(false);
+            totalmax.setEnabled(false);
+            tr.setEnabled(false);
+            vimin.setEnabled(false);
+            pmin.setEnabled(false);
+
+            pymin.setEnabled(false);
+            pymax.setEnabled(false);
+
+            extra.setEnabled(false);
+            mta.setEnabled(false);
+            improvement.setEnabled(false);
+            dmin.setEnabled(false);
+
+        } else if (radioMta.isSelected()) {
+            mta.setEnabled(true);
+
+            totalmin.setEnabled(false);
+            totalmax.setEnabled(false);
+            tr.setEnabled(false);
+            vimin.setEnabled(false);
+
+
+            psmin.setEnabled(false);
+
+            pmin.setEnabled(false);
+
+            pymin.setEnabled(false);
+            pymax.setEnabled(false);
+
+            extra.setEnabled(false);
+            dmin.setEnabled(false);
+
+            improvement.setEnabled(false);
+
+        } else if (radioImpro.isSelected()) {
+            improvement.setEnabled(true);
+            totalmin.setEnabled(false);
+            totalmax.setEnabled(false);
+            tr.setEnabled(false);
+            vimin.setEnabled(false);
+            psmin.setEnabled(false);
+
+            pmin.setEnabled(false);
+
+            pymin.setEnabled(false);
+            pymax.setEnabled(false);
+
+            extra.setEnabled(false);
+            mta.setEnabled(false);
+            dmin.setEnabled(false);
+
+
+        } else if (radioExtra.isSelected()) {
+            extra.setEnabled(true);
+            improvement.setEnabled(false);
+
+            totalmin.setEnabled(false);
+            totalmax.setEnabled(true);
+            tr.setEnabled(false);
+            vimin.setEnabled(false);
+
+
+            psmin.setEnabled(false);
+
+            pmin.setEnabled(false);
+
+            pymin.setEnabled(false);
+            pymax.setEnabled(true);
+            mta.setEnabled(false);
+
+            dmin.setEnabled(false);
+        } else if (radioDoloc.isSelected()) {
+            dmin.setEnabled(true);
+            improvement.setEnabled(false);
+            totalmin.setEnabled(false);
+            totalmax.setEnabled(false);
+            tr.setEnabled(false);
+            vimin.setEnabled(false);
+            psmin.setEnabled(false);
+            pmin.setEnabled(false);
+            pymin.setEnabled(false);
+            pymax.setEnabled(false);
+            extra.setEnabled(false);
+            mta.setEnabled(false);
+
+
+        }
+
+
+    }
+
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         ConnectionDB.operationDataBase.FillTo_TableView(tableData);
         setResizable(false);
         setDefaultCloseOperation(tableOperationMongoDB.DO_NOTHING_ON_CLOSE);
         //radioButton();
-      groupButton.add(radioDistPassCount);
-      groupButton.add(radioDistTotAmount);
-      groupButton.add(radioDistTripdist);
-        
+        groupButton.add(radioDistPassCount);
+        groupButton.add(radioDistTotAmount);
+        groupButton.add(radioDistTripdist);
+
         groupButton.add(radioDoloc);
         groupButton.add(radioExtra);
         groupButton.add(radioImpro);
         groupButton.add(radioP);
         groupButton.add(radioMta);
-         groupButton.add(radiovendor);
-          groupButton.add(radioTrip);
-           groupButton.add(radioTotal);
-         
-         groupButton.add(radioPaymment);
-          
-            groupButton.add(radioPuloc);
-            
-             radiovendor.setSelected(true);
+        groupButton.add(radiovendor);
+        groupButton.add(radioTrip);
+        groupButton.add(radioTotal);
+
+        groupButton.add(radioPaymment);
+
+        groupButton.add(radioPuloc);
+
+        radiovendor.setSelected(true);
     }//GEN-LAST:event_formWindowOpened
 
     private void radiovendorMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_radiovendorMouseMoved
@@ -1475,66 +1577,46 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
 
     private void BtnCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCalcActionPerformed
 
-        if(radiovendor.isSelected())
-        {
-            DefaultTableModel model=(DefaultTableModel) tableData.getModel();
+        if (radiovendor.isSelected()) {
+            DefaultTableModel model = (DefaultTableModel) tableData.getModel();
             model.setRowCount(0);
-            ConnectionDB.operationDataBase.searchData2(tableData, "VendorID",(int)vimin.getValue());
-        }
-        else if(radioP.isSelected())
-        {
-            DefaultTableModel model=(DefaultTableModel) tableData.getModel();
+            ConnectionDB.operationDataBase.searchData2(tableData, "VendorID", (int) vimin.getValue());
+        } else if (radioP.isSelected()) {
+            DefaultTableModel model = (DefaultTableModel) tableData.getModel();
             model.setRowCount(0);
-            ConnectionDB.operationDataBase.searchData2(tableData, "passenger_count",(int)psmin.getValue());
-        }
-        else if(radioPuloc.isSelected())
-        {
-            DefaultTableModel model=(DefaultTableModel) tableData.getModel();
+            ConnectionDB.operationDataBase.searchData2(tableData, "passenger_count", (int) psmin.getValue());
+        } else if (radioPuloc.isSelected()) {
+            DefaultTableModel model = (DefaultTableModel) tableData.getModel();
             model.setRowCount(0);
-            ConnectionDB.operationDataBase.searchData(tableData, "pulocationId",(int)pmin.getValue());
-        }
-        else if(radioDoloc.isSelected())
-        {
-            DefaultTableModel model=(DefaultTableModel) tableData.getModel();
+            ConnectionDB.operationDataBase.searchData(tableData, "pulocationId", (int) pmin.getValue());
+        } else if (radioDoloc.isSelected()) {
+            DefaultTableModel model = (DefaultTableModel) tableData.getModel();
             model.setRowCount(0);
-            ConnectionDB.operationDataBase.searchData(tableData, "dolocationid",(int)dmin.getValue());
-        }
-
-        else if(radioPaymment.isSelected())
-        {
-            DefaultTableModel model=(DefaultTableModel) tableData.getModel();
+            ConnectionDB.operationDataBase.searchData(tableData, "dolocationid", (int) dmin.getValue());
+        } else if (radioPaymment.isSelected()) {
+            DefaultTableModel model = (DefaultTableModel) tableData.getModel();
             model.setRowCount(0);
-            ConnectionDB.operationDataBase.searchData2(tableData, "paymment_type",(int)pymin.getValue());
-        }
-        else if(radioMta.isSelected())
-        {
-            DefaultTableModel model=(DefaultTableModel) tableData.getModel();
+            ConnectionDB.operationDataBase.searchData2(tableData, "paymment_type", (int) pymin.getValue());
+        } else if (radioMta.isSelected()) {
+            DefaultTableModel model = (DefaultTableModel) tableData.getModel();
             model.setRowCount(0);
-            ConnectionDB.operationDataBase.searchData3(tableData, "mtaa_tax",(double)mta.getValue());
-        }
-        else if(radioImpro.isSelected())
-        {
-            DefaultTableModel model=(DefaultTableModel) tableData.getModel();
+            ConnectionDB.operationDataBase.searchData3(tableData, "mtaa_tax", (double) mta.getValue());
+        } else if (radioImpro.isSelected()) {
+            DefaultTableModel model = (DefaultTableModel) tableData.getModel();
             model.setRowCount(0);
-            ConnectionDB.operationDataBase.searchData3(tableData, "improvement_surcharge",(double)improvement.getValue());
-        }
-        else if(radioTrip.isSelected())
-        {
-            DefaultTableModel model=(DefaultTableModel) tableData.getModel();
+            ConnectionDB.operationDataBase.searchData3(tableData, "improvement_surcharge", (double) improvement.getValue());
+        } else if (radioTrip.isSelected()) {
+            DefaultTableModel model = (DefaultTableModel) tableData.getModel();
             model.setRowCount(0);
-            ConnectionDB.operationDataBase.searchData4(tableData, "trip_distance",(double)tr.getValue());
-        }
-        else if(radioTotal.isSelected())
-        {
-            DefaultTableModel model=(DefaultTableModel) tableData.getModel();
+            ConnectionDB.operationDataBase.searchData4(tableData, "trip_distance", (double) tr.getValue());
+        } else if (radioTotal.isSelected()) {
+            DefaultTableModel model = (DefaultTableModel) tableData.getModel();
             model.setRowCount(0);
-            ConnectionDB.operationDataBase.searchData4(tableData, "total_amount",(double)totalmin.getValue());
-        }
-        else if(radioExtra.isSelected())
-        {
-            DefaultTableModel model=(DefaultTableModel) tableData.getModel();
+            ConnectionDB.operationDataBase.searchData4(tableData, "total_amount", (double) totalmin.getValue());
+        } else if (radioExtra.isSelected()) {
+            DefaultTableModel model = (DefaultTableModel) tableData.getModel();
             model.setRowCount(0);
-            ConnectionDB.operationDataBase.searchData6(tableData, "extra",(double)extra.getValue(), (double) pymax.getValue(), (double) totalmax.getValue());
+            ConnectionDB.operationDataBase.searchData6(tableData, "extra", (double) extra.getValue(), (double) pymax.getValue(), (double) totalmax.getValue());
         }
 
     }//GEN-LAST:event_BtnCalcActionPerformed
@@ -1652,301 +1734,225 @@ public class tableOperationMongoDB extends javax.swing.JFrame {
         }
         new operationDataBase().fillFautSearch(tableHistory, list);
        */
-       if(radiovendor.isSelected())
-        {
-           operationDataBase.getObjectID(tableData, tablevndid);
+        if (radiovendor.isSelected()) {
+            operationDataBase.getObjectID(tableData, tablevndid);
         }
-     // else if(radioDistPassCount.isSelected())
-               else if(radioP.isSelected())
- 
-        {
-          operationDataBase.getObjectID(tableData, tablePassangerCount); 
+        // else if(radioDistPassCount.isSelected())
+        else if (radioP.isSelected()) {
+            operationDataBase.getObjectID(tableData, tablePassangerCount);
         }
-       //else if(radioDistTotAmount.isSelected())
-        else if(radioTotal.isSelected())
-        {
-          operationDataBase.getObjectID(tableData, tableTotalAmount); 
+        //else if(radioDistTotAmount.isSelected())
+        else if (radioTotal.isSelected()) {
+            operationDataBase.getObjectID(tableData, tableTotalAmount);
         }
         //else if(radioDistTripdist.isSelected())
-        else if(radioTrip.isSelected())
-        {
-          operationDataBase.getObjectID(tableData, tableTripDistance); 
-        }
-        else if(radioExtra.isSelected())
-        {
-          operationDataBase.getObjectID(tableData, tableExtra); 
-        }
-        else if(radioImpro.isSelected())
-        {
-          operationDataBase.getObjectID(tableData, tableImprovementSurcharge); 
-        }
-        else if(radioMta.isSelected())
-        {
-          operationDataBase.getObjectID(tableData, tableMtaTax); 
+        else if (radioTrip.isSelected()) {
+            operationDataBase.getObjectID(tableData, tableTripDistance);
+        } else if (radioExtra.isSelected()) {
+            operationDataBase.getObjectID(tableData, tableExtra);
+        } else if (radioImpro.isSelected()) {
+            operationDataBase.getObjectID(tableData, tableImprovementSurcharge);
+        } else if (radioMta.isSelected()) {
+            operationDataBase.getObjectID(tableData, tableMtaTax);
         }
     }//GEN-LAST:event_BtnSave1ActionPerformed
 
     private void BtnSave2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSave2ActionPerformed
-       test=true;
-        Vector<ObjectId> list=new Vector<ObjectId>();
-        if(radiovendor.isSelected())
-        {
-            for(int i=0;i<tableData.getModel().getRowCount();i++)
-            {
-                list.add((ObjectId) tableData.getModel().getValueAt(i,0));
+        test = true;
+        Vector<ObjectId> list = new Vector<ObjectId>();
+        if (radiovendor.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                list.add((ObjectId) tableData.getModel().getValueAt(i, 0));
             }
             new operationDataBase().fillFautSearch(tableDelete, list);
-        }
-        else if(radioP.isSelected())
-        {
-           for(int i=0;i<tableData.getModel().getRowCount();i++)
-            {
-                list.add((ObjectId) tableData.getModel().getValueAt(i,0));
+        } else if (radioP.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                list.add((ObjectId) tableData.getModel().getValueAt(i, 0));
             }
             new operationDataBase().fillFautSearch(tableDelete, list);
-        }
-        else if(radioPuloc.isSelected())
-        {
-            for(int i=0;i<tableData.getModel().getRowCount();i++)
-            {
-                list.add((ObjectId) tableData.getModel().getValueAt(i,0));
+        } else if (radioPuloc.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                list.add((ObjectId) tableData.getModel().getValueAt(i, 0));
             }
             new operationDataBase().fillFautSearch(tableDelete, list);
-        }
-        else if(radioDoloc.isSelected())
-        {
-            for(int i=0;i<tableData.getModel().getRowCount();i++)
-            {
-                list.add((ObjectId) tableData.getModel().getValueAt(i,0));
-            }
-            new operationDataBase().fillFautSearch(tableDelete, list);        }
-
-        else if(radioPaymment.isSelected())
-        {
-            for(int i=0;i<tableData.getModel().getRowCount();i++)
-            {
-                list.add((ObjectId) tableData.getModel().getValueAt(i,0));
+        } else if (radioDoloc.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                list.add((ObjectId) tableData.getModel().getValueAt(i, 0));
             }
             new operationDataBase().fillFautSearch(tableDelete, list);
-        }
-        else if(radioMta.isSelected())
-        {
-            for(int i=0;i<tableData.getModel().getRowCount();i++)
-            {
-                list.add((ObjectId) tableData.getModel().getValueAt(i,0));
+        } else if (radioPaymment.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                list.add((ObjectId) tableData.getModel().getValueAt(i, 0));
             }
             new operationDataBase().fillFautSearch(tableDelete, list);
-        }
-        else if(radioImpro.isSelected())
-        {
-             for(int i=0;i<tableData.getModel().getRowCount();i++)
-            {
-                list.add((ObjectId) tableData.getModel().getValueAt(i,0));
+        } else if (radioMta.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                list.add((ObjectId) tableData.getModel().getValueAt(i, 0));
             }
             new operationDataBase().fillFautSearch(tableDelete, list);
-        }
-        else if(radioTrip.isSelected())
-        {
-             for(int i=0;i<tableData.getModel().getRowCount();i++)
-            {
-                list.add((ObjectId) tableData.getModel().getValueAt(i,0));
+        } else if (radioImpro.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                list.add((ObjectId) tableData.getModel().getValueAt(i, 0));
             }
             new operationDataBase().fillFautSearch(tableDelete, list);
-        }
-        else if(radioTotal.isSelected())
-        {
-             for(int i=0;i<tableData.getModel().getRowCount();i++)
-            {
-                list.add((ObjectId) tableData.getModel().getValueAt(i,0));
+        } else if (radioTrip.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                list.add((ObjectId) tableData.getModel().getValueAt(i, 0));
             }
             new operationDataBase().fillFautSearch(tableDelete, list);
-        }
-        else if(radioExtra.isSelected())
-        {
-             for(int i=0;i<tableData.getModel().getRowCount();i++)
-            {
-                list.add((ObjectId) tableData.getModel().getValueAt(i,0));
+        } else if (radioTotal.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                list.add((ObjectId) tableData.getModel().getValueAt(i, 0));
             }
             new operationDataBase().fillFautSearch(tableDelete, list);
-        }
-       
-    }                                        
-
-    private void BtnSaveActionPerformed(java.awt.event.ActionEvent evt) {                                        
-        String[] list=new String[500000];
-        if(radiovendor.isSelected())
-        {
-            for(int i=0;i<tableData.getModel().getRowCount();i++)
-            {
-                list[i]=tableData.getModel().getValueAt(i,0).toString();
-                System.out.println(list[i]);
+        } else if (radioExtra.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                list.add((ObjectId) tableData.getModel().getValueAt(i, 0));
             }
-        }
-        else if(radioP.isSelected())
-        {
-            for(int i=0;i<tableData.getModel().getRowCount();i++)
-            {
-                list[i]=tableData.getModel().getValueAt(i,0).toString();
-                System.out.println(list[i]);
-            }
-        }
-        else if(radioPuloc.isSelected())
-        {
-            for(int i=0;i<tableData.getModel().getRowCount();i++)
-            {
-                list[i]=tableData.getModel().getValueAt(i,0).toString();
-                System.out.println(list[i]);
-            }
-        }
-        else if(radioDoloc.isSelected())
-        {
-            for(int i=0;i<tableData.getModel().getRowCount();i++)
-            {
-                list[i]=tableData.getModel().getValueAt(i,0).toString();
-                System.out.println(list[i]);
-            }
+            new operationDataBase().fillFautSearch(tableDelete, list);
         }
 
-        else if(radioPaymment.isSelected())
-        {
-            for(int i=0;i<tableData.getModel().getRowCount();i++)
-            {
-                list[i]=tableData.getModel().getValueAt(i,0).toString();
+    }
+
+    private void BtnSaveActionPerformed(java.awt.event.ActionEvent evt) {
+        String[] list = new String[500000];
+        if (radiovendor.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                list[i] = tableData.getModel().getValueAt(i, 0).toString();
                 System.out.println(list[i]);
             }
-        }
-        else if(radioMta.isSelected())
-        {
-            for(int i=0;i<tableData.getModel().getRowCount();i++)
-            {
-                list[i]=tableData.getModel().getValueAt(i,0).toString();
+        } else if (radioP.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                list[i] = tableData.getModel().getValueAt(i, 0).toString();
                 System.out.println(list[i]);
             }
-        }
-        else if(radioImpro.isSelected())
-        {
-            for(int i=0;i<tableData.getModel().getRowCount();i++)
-            {
-                list[i]=tableData.getModel().getValueAt(i,0).toString();
+        } else if (radioPuloc.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                list[i] = tableData.getModel().getValueAt(i, 0).toString();
                 System.out.println(list[i]);
             }
-        }
-        else if(radioTrip.isSelected())
-        {
-            for(int i=0;i<tableData.getModel().getRowCount();i++)
-            {
-                list[i]=tableData.getModel().getValueAt(i,0).toString();
+        } else if (radioDoloc.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                list[i] = tableData.getModel().getValueAt(i, 0).toString();
                 System.out.println(list[i]);
             }
-        }
-        else if(radioTotal.isSelected())
-        {
-            for(int i=0;i<tableData.getModel().getRowCount();i++)
-            {
-                list[i]=tableData.getModel().getValueAt(i,0).toString();
+        } else if (radioPaymment.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                list[i] = tableData.getModel().getValueAt(i, 0).toString();
                 System.out.println(list[i]);
             }
-        }
-        else if(radioExtra.isSelected())
-        {
-            for(int i=0;i<tableData.getModel().getRowCount();i++)
-            {
-                list[i]=tableData.getModel().getValueAt(i,0).toString();
-               
+        } else if (radioMta.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                list[i] = tableData.getModel().getValueAt(i, 0).toString();
+                System.out.println(list[i]);
+            }
+        } else if (radioImpro.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                list[i] = tableData.getModel().getValueAt(i, 0).toString();
+                System.out.println(list[i]);
+            }
+        } else if (radioTrip.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                list[i] = tableData.getModel().getValueAt(i, 0).toString();
+                System.out.println(list[i]);
+            }
+        } else if (radioTotal.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                list[i] = tableData.getModel().getValueAt(i, 0).toString();
+                System.out.println(list[i]);
+            }
+        } else if (radioExtra.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                list[i] = tableData.getModel().getValueAt(i, 0).toString();
+
             }
         }
 
     }//GEN-LAST:event_BtnSave2ActionPerformed
-static boolean test;
+
+    static boolean test;
+
     private void BtnEliminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEliminActionPerformed
-      DefaultTableModel model=(DefaultTableModel) tableDelete.getModel();
-       
-     if(test){
-      for(int i=0;i<tableDelete.getModel().getRowCount();i++)
-      {
-        ObjectId a=(ObjectId) tableDelete.getModel().getValueAt(i, 0);
-        for(int j=1;j<tableDelete.getModel().getRowCount();j++)
-        {
-        if(a.equals(tableDelete.getModel().getValueAt(j, 0)))
-        {
-         model.removeRow(j);
+        DefaultTableModel model = (DefaultTableModel) tableDelete.getModel();
+
+        if (test) {
+            for (int i = 0; i < tableDelete.getModel().getRowCount(); i++) {
+                ObjectId a = (ObjectId) tableDelete.getModel().getValueAt(i, 0);
+                for (int j = 1; j < tableDelete.getModel().getRowCount(); j++) {
+                    if (a.equals(tableDelete.getModel().getValueAt(j, 0))) {
+                        model.removeRow(j);
+                    }
+
+                }
+            }
         }
-                
-        }
-      }
-     }
-     test=false;
-      Tools.showMessage(tableDelete.getModel().getRowCount()+"");
-       
-      
+        test = false;
+        Tools.showMessage(tableDelete.getModel().getRowCount() + "");
+
+
     }//GEN-LAST:event_BtnEliminActionPerformed
 
     private void BtnTAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTAmountActionPerformed
-        TxtResTamount1.setText(operationDataBase.getAver(tableData, 18)+"");
+        TxtResTamount1.setText(operationDataBase.getAver(tableData, 18) + "");
         TxtMaxTAmount.setText("31107.91");
         TxtMinTamount.setText("-300.3");
     }//GEN-LAST:event_BtnTAmountActionPerformed
 
     private void BtnPCountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPCountActionPerformed
-TxtResPCount.setText(operationDataBase.getAver(tableData,5)+"");
-TxxtMinPasCount.setText("9");
-TxtMaxPassCount.setText("0");
+        TxtResPCount.setText(operationDataBase.getAver(tableData, 5) + "");
+        TxxtMinPasCount.setText("9");
+        TxtMaxPassCount.setText("0");
     }//GEN-LAST:event_BtnPCountActionPerformed
-//hna than bdlte pcq nrml tab tbdel ki wdna 1 
-    private void BtnTripDistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTripDistActionPerformed
-       TxtResTripDist.setText(operationDataBase.getAver(tableData,6)+"");
-      TxtMinTripDist.setText("0");
-      TxtMaxtripDistance.setText("128.73");
-    }//GEN-LAST:event_BtnTripDistActionPerformed
-public void DistrRadio()
-{
-if(radioDistPassCount.isSelected())
-{
-    SpnTripDistMin.setEnabled(false);
-    SpnTripDistMax.setEnabled(false);
-SpnPassCOUNTMin.setEnabled(true);
-SpnPassCOUNTMax.setEnabled(true);
-SpnTotAmountMin.setEnabled(false);
-SpnTotAmountMax.setEnabled(false);
-SpnTripTimeMax1.setEnabled(false);
-  SpnTripTimeMin1.setEnabled(false);
-}
-else if(radioDistTotAmount.isSelected())
-{
-    SpnTripDistMin.setEnabled(false);
-    SpnTripDistMax.setEnabled(false);
-SpnPassCOUNTMin.setEnabled(false);
-SpnPassCOUNTMax.setEnabled(false);
-SpnTotAmountMin.setEnabled(true);
-SpnTotAmountMax.setEnabled(true);
-SpnTripTimeMax1.setEnabled(false);
-  SpnTripTimeMin1.setEnabled(false);
-}
-else if(radioTripTime1.isSelected())
-{
-      SpnTripTimeMax1.setEnabled(true);
-  SpnTripTimeMin1.setEnabled(true);
-    SpnTripDistMin.setEnabled(false);
-    SpnTripDistMax.setEnabled(false);
-SpnPassCOUNTMin.setEnabled(false);
-SpnPassCOUNTMax.setEnabled(false);
-SpnTotAmountMin.setEnabled(false);
-SpnTotAmountMax.setEnabled(false);
-}
 
-else{
-  SpnTripDistMin.setEnabled(true);
-  SpnTripDistMax.setEnabled(true);
-SpnPassCOUNTMin.setEnabled(false);
-SpnPassCOUNTMax.setEnabled(false);
-SpnTotAmountMin.setEnabled(false);
-SpnTotAmountMax.setEnabled(false);
-SpnTripTimeMax1.setEnabled(false);
-  SpnTripTimeMin1.setEnabled(false);
-}
-}
+    //hna than bdlte pcq nrml tab tbdel ki wdna 1
+    private void BtnTripDistActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTripDistActionPerformed
+        TxtResTripDist.setText(operationDataBase.getAver(tableData, 6) + "");
+        TxtMinTripDist.setText("0");
+        TxtMaxtripDistance.setText("128.73");
+    }//GEN-LAST:event_BtnTripDistActionPerformed
+
+    public void DistrRadio() {
+        if (radioDistPassCount.isSelected()) {
+            SpnTripDistMin.setEnabled(false);
+            SpnTripDistMax.setEnabled(false);
+            SpnPassCOUNTMin.setEnabled(true);
+            SpnPassCOUNTMax.setEnabled(true);
+            SpnTotAmountMin.setEnabled(false);
+            SpnTotAmountMax.setEnabled(false);
+            SpnTripTimeMax1.setEnabled(false);
+            SpnTripTimeMin1.setEnabled(false);
+        } else if (radioDistTotAmount.isSelected()) {
+            SpnTripDistMin.setEnabled(false);
+            SpnTripDistMax.setEnabled(false);
+            SpnPassCOUNTMin.setEnabled(false);
+            SpnPassCOUNTMax.setEnabled(false);
+            SpnTotAmountMin.setEnabled(true);
+            SpnTotAmountMax.setEnabled(true);
+            SpnTripTimeMax1.setEnabled(false);
+            SpnTripTimeMin1.setEnabled(false);
+        } else if (radioTripTime1.isSelected()) {
+            SpnTripTimeMax1.setEnabled(true);
+            SpnTripTimeMin1.setEnabled(true);
+            SpnTripDistMin.setEnabled(false);
+            SpnTripDistMax.setEnabled(false);
+            SpnPassCOUNTMin.setEnabled(false);
+            SpnPassCOUNTMax.setEnabled(false);
+            SpnTotAmountMin.setEnabled(false);
+            SpnTotAmountMax.setEnabled(false);
+        } else {
+            SpnTripDistMin.setEnabled(true);
+            SpnTripDistMax.setEnabled(true);
+            SpnPassCOUNTMin.setEnabled(false);
+            SpnPassCOUNTMax.setEnabled(false);
+            SpnTotAmountMin.setEnabled(false);
+            SpnTotAmountMax.setEnabled(false);
+            SpnTripTimeMax1.setEnabled(false);
+            SpnTripTimeMin1.setEnabled(false);
+        }
+    }
+
     private void radioDistTotAmountMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_radioDistTotAmountMouseClicked
-       DistrRadio();
+        DistrRadio();
     }//GEN-LAST:event_radioDistTotAmountMouseClicked
 
     private void radioDistTotAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioDistTotAmountActionPerformed
@@ -1954,7 +1960,7 @@ SpnTripTimeMax1.setEnabled(false);
     }//GEN-LAST:event_radioDistTotAmountActionPerformed
 
     private void radioDistTripdistMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_radioDistTripdistMouseClicked
-       DistrRadio();
+        DistrRadio();
     }//GEN-LAST:event_radioDistTripdistMouseClicked
 
     private void radioDistPassCountMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_radioDistPassCountMouseClicked
@@ -1970,61 +1976,50 @@ SpnTripTimeMax1.setEnabled(false);
     }//GEN-LAST:event_BtnTotAmountActionPerformed
 
     private void BtnPassCountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPassCountActionPerformed
- double[] num={14645, 721734, 163900, 49019, 24627, 2859, 5, 6, 1};
-        new Tools().createFrameBarChart_PassengerCount(num,"Passenger Count Graphics",9);
+        double[] num = {14645, 721734, 163900, 49019, 24627, 2859, 5, 6, 1};
+        new Tools().createFrameBarChart_PassengerCount(num, "Passenger Count Graphics", 9);
     }//GEN-LAST:event_BtnPassCountActionPerformed
 
     private void BtnDistCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDistCalcActionPerformed
-        DefaultTableModel model=(DefaultTableModel) tableDistrDelete.getModel();
+        DefaultTableModel model = (DefaultTableModel) tableDistrDelete.getModel();
         model.setRowCount(0);
-        if (radioDistPassCount.isSelected()){
-        operationDataBase.istogrameDist((int)SpnPassCOUNTMin.getValue(),(int) SpnPassCOUNTMax.getValue(), "passenger_count",tableDistrDelete );  //tableData);
-        }
-        else if(radioDistTotAmount.isSelected())
-        {
-        operationDataBase.istogrameDistDB((double)SpnTotAmountMin.getValue(),(double) SpnTotAmountMax.getValue(), "total_amount", tableDistrDelete);
-        }
-       
-        else{
-        operationDataBase.istogrameDistDB((double)SpnTripDistMin.getValue(),(double) SpnTripDistMax.getValue(), "trip_distance", tableDistrDelete);
+        if (radioDistPassCount.isSelected()) {
+            operationDataBase.istogrameDist((int) SpnPassCOUNTMin.getValue(), (int) SpnPassCOUNTMax.getValue(), "passenger_count", tableDistrDelete);  //tableData);
+        } else if (radioDistTotAmount.isSelected()) {
+            operationDataBase.istogrameDistDB((double) SpnTotAmountMin.getValue(), (double) SpnTotAmountMax.getValue(), "total_amount", tableDistrDelete);
+        } else {
+            operationDataBase.istogrameDistDB((double) SpnTripDistMin.getValue(), (double) SpnTripDistMax.getValue(), "trip_distance", tableDistrDelete);
         }
     }//GEN-LAST:event_BtnDistCalcActionPerformed
 
     private void BtnSave3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnSave3ActionPerformed
-       Vector<ObjectId> vec=new Vector<ObjectId>();
-       if(radioDistPassCount.isSelected())
-       {
-       for(int i=0;i<tableData.getModel().getRowCount();i++)
-       {
-       vec.add((ObjectId) tableData.getModel().getValueAt(i, 0));
-       }
-       
-       }
-       else if(radioDistTotAmount.isSelected())
-       {
-       for(int i=0;i<tableData.getModel().getRowCount();i++)
-       {
-       vec.add((ObjectId) tableData.getModel().getValueAt(i, 0));
-       }
-       
-       }
-       else
-       {
-       for(int i=0;i<tableData.getModel().getRowCount();i++)
-       {
-       vec.add((ObjectId) tableData.getModel().getValueAt(i, 0));
-       }
-       
-       }
-       new operationDataBase().fillFautSearch(tableDistrDelete, vec);
+        Vector<ObjectId> vec = new Vector<ObjectId>();
+        if (radioDistPassCount.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                vec.add((ObjectId) tableData.getModel().getValueAt(i, 0));
+            }
+
+        } else if (radioDistTotAmount.isSelected()) {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                vec.add((ObjectId) tableData.getModel().getValueAt(i, 0));
+            }
+
+        } else {
+            for (int i = 0; i < tableData.getModel().getRowCount(); i++) {
+                vec.add((ObjectId) tableData.getModel().getValueAt(i, 0));
+            }
+
+        }
+        new operationDataBase().fillFautSearch(tableDistrDelete, vec);
     }//GEN-LAST:event_BtnSave3ActionPerformed
 
     private void BtnElimin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnElimin1ActionPerformed
-       operationDataBase.loadMatrix( tablevndid,tableExtra,tableImprovementSurcharge,tableMtaTax,tablePassangerCount,tableTotalAmount,tableTripDistance,tabMatrix);
+        operationDataBase.loadMatrix(tablevndid, tableExtra, tableImprovementSurcharge, tableMtaTax, tablePassangerCount, tableTotalAmount, tableTripDistance, tabMatrix);
     }//GEN-LAST:event_BtnElimin1ActionPerformed
-//hadi ana dertha mn rassi hhh 
+
+    //hadi ana dertha mn rassi hhh
     private void BtnTripTime1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnTripTime1ActionPerformed
-TxtResTripTime.setText(operationDataBase.getAver(tableData, 4)+"");
+        TxtResTripTime.setText(operationDataBase.getAver(tableData, 4) + "");
         TxtMaxTripTime1.setText("10000");
         TxtMinTripTime1.setText("-422");        // TODO add your handling code here:
     }//GEN-LAST:event_BtnTripTime1ActionPerformed
@@ -2034,7 +2029,7 @@ TxtResTripTime.setText(operationDataBase.getAver(tableData, 4)+"");
     }//GEN-LAST:event_BtnTotAmount1ActionPerformed
 
     private void radioTripTime1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_radioTripTime1MouseClicked
-     DistrRadio();        // TODO add your handling code here:
+        DistrRadio();        // TODO add your handling code here:
     }//GEN-LAST:event_radioTripTime1MouseClicked
 
     private void radioTripTime1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioTripTime1ActionPerformed
@@ -2052,7 +2047,7 @@ TxtResTripTime.setText(operationDataBase.getAver(tableData, 4)+"");
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -2080,123 +2075,6 @@ TxtResTripTime.setText(operationDataBase.getAver(tableData, 4)+"");
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private rojeru_san.RSButton BtnCalc;
-    private rojeru_san.RSButton BtnClose;
-    private rojeru_san.RSButton BtnDistCalc;
-    private rojeru_san.RSButton BtnElimin;
-    private rojeru_san.RSButton BtnElimin1;
-    private rojeru_san.RSButton BtnPCount;
-    private rojeru_san.RSButton BtnPassCount;
-    private rojeru_san.RSButton BtnRef;
-    private rojeru_san.RSButton BtnSave1;
-    private rojeru_san.RSButton BtnSave2;
-    private rojeru_san.RSButton BtnSave3;
-    private rojeru_san.RSButton BtnTAmount;
-    private rojeru_san.RSButton BtnTotAmount;
-    private rojeru_san.RSButton BtnTotAmount1;
-    private rojeru_san.RSButton BtnTripDist;
-    private rojeru_san.RSButton BtnTripTime1;
-    private rojeru_san.RSButton BtnTrpDist;
-    private javax.swing.JSpinner SpnPassCOUNTMax;
-    private javax.swing.JSpinner SpnPassCOUNTMin;
-    private javax.swing.JSpinner SpnTotAmountMax;
-    private javax.swing.JSpinner SpnTotAmountMin;
-    private javax.swing.JSpinner SpnTripDistMax;
-    private javax.swing.JSpinner SpnTripDistMin;
-    private javax.swing.JSpinner SpnTripTimeMax1;
-    private javax.swing.JSpinner SpnTripTimeMin1;
-    private javax.swing.JLabel TxtMaxPassCount;
-    private javax.swing.JLabel TxtMaxTAmount;
-    private javax.swing.JLabel TxtMaxTripTime1;
-    private javax.swing.JLabel TxtMaxtripDistance;
-    private javax.swing.JLabel TxtMinTamount;
-    private javax.swing.JLabel TxtMinTripDist;
-    private javax.swing.JLabel TxtMinTripTime1;
-    private javax.swing.JLabel TxtResPCount;
-    private javax.swing.JLabel TxtResTamount1;
-    private javax.swing.JLabel TxtResTripDist;
-    private javax.swing.JLabel TxtResTripTime;
-    private javax.swing.JLabel TxxtMinPasCount;
-    private javax.swing.JSpinner dmin;
-    private javax.swing.JSpinner extra;
-    private javax.swing.ButtonGroup groupButton;
-    private javax.swing.JSpinner improvement;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane10;
-    private javax.swing.JScrollPane jScrollPane11;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JSpinner mta;
-    private javax.swing.JPanel panelRegle;
-    private javax.swing.JPanel panelTabel;
-    private javax.swing.JSpinner pmin;
-    private javax.swing.JSpinner psmin;
-    private javax.swing.JSpinner pymax;
-    private javax.swing.JSpinner pymin;
-    private javax.swing.JRadioButton radioDistPassCount;
-    private javax.swing.JRadioButton radioDistTotAmount;
-    private javax.swing.JRadioButton radioDistTripdist;
-    private javax.swing.JRadioButton radioDoloc;
-    private javax.swing.JRadioButton radioExtra;
-    private javax.swing.JRadioButton radioImpro;
-    private javax.swing.JRadioButton radioMta;
-    private javax.swing.JRadioButton radioP;
-    private javax.swing.JRadioButton radioPaymment;
-    private javax.swing.JRadioButton radioPuloc;
-    private javax.swing.JRadioButton radioTotal;
-    private javax.swing.JRadioButton radioTrip;
-    private javax.swing.JRadioButton radioTripTime1;
-    private javax.swing.JRadioButton radiovendor;
-    private javax.swing.JTable tabMatrix;
-    private javax.swing.JTable tableData;
-    private javax.swing.JTable tableDelete;
-    private javax.swing.JTable tableDistrDelete;
-    private javax.swing.JTable tableExtra;
-    private javax.swing.JTable tableImprovementSurcharge;
-    private javax.swing.JTable tableMtaTax;
-    private javax.swing.JTable tablePassangerCount;
-    private javax.swing.JTable tableTotalAmount;
-    private javax.swing.JTable tableTripDistance;
-    private javax.swing.JTable tablevndid;
-    private javax.swing.JSpinner totalmax;
-    private javax.swing.JSpinner totalmin;
-    private javax.swing.JSpinner tr;
-    private javax.swing.JSpinner vimin;
+
     // End of variables declaration//GEN-END:variables
 }
